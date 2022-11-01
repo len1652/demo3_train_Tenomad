@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".fragment.information">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/txtAvatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="8dp"
+            app:shapeAppearanceOverlay="@style/Circular"
+            app:srcCompat="@mipmap/ic_launcher">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtBirth"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="Birthday"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabTextColor="#000000">
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job"
+            android:tint="#000000" />
+
+        <com.google.android.material.tabs.TabItem
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:tint="#000000" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

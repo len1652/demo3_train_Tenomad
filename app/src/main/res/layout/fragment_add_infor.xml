@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full name" />
+
+            <EditText
+                android:id="@+id/edtName"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="John  Tom"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Birthday" />
+
+            <EditText
+                android:id="@+id/edtBirth"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="30/2/2000"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avatar" />
+
+
+            <EditText
+                android:id="@+id/edtAvatar"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="https://www.w3schools.com/howto/img_avatar.png"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job" />
+
+
+            <EditText
+                android:id="@+id/edtJob"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Development"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address" />
+
+
+            <EditText
+                android:id="@+id/edtAddress"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_border"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Hue City"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/textView13"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About" />
+
+            <EditText
+                android:id="@+id/edtAbout"
+                style="@style/stylelabel_black"
+                android:layout_width="match_parent"
+                android:layout_height="184dp"
+                android:autoText="false"
+                android:background="@drawable/textview_border"
+                android:ems="10"
+                android:lines="5"
+                android:selectAllOnFocus="false"
+                android:text="like tea and cake"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+
+                android:id="@+id/btnDone"
+                style="@style/stylelabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border"
+                android:gravity="center"
+                android:text="Done" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
