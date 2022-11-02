@@ -48,5 +48,14 @@ public class MainActivity extends AppCompatActivity implements iCallback{
         fragmentManager.beginTransaction().add(R.id.frame, information.class, bundle).commit();
     }
 
+    @Override
+    public void callbackJumpAdd() {
+        FragmentManager fragmentManager =getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Fragment fragment = new addInfor();
+        fragmentTransaction.replace(R.id.frame,fragment);
+        fragmentTransaction.commit();
+    }
+
 
 }

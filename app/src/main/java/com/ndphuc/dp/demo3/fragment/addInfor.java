@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ import java.text.SimpleDateFormat;
 public class addInfor extends Fragment {
 
     private Button btnDone;
+    private ImageView btnBack;
     private TextView lblbar,edtName,edtBirth,edtAvatar,edtJob,edtAddress,edtAbout;
     private iCallback callback;
     contact ct = new contact();
@@ -42,6 +44,7 @@ public class addInfor extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         lblbar = getActivity().findViewById(R.id.lblBar);
+        btnBack = getActivity().findViewById(R.id.btnBack);
         btnDone = view.findViewById(R.id.btnDone);
 
         edtName = view.findViewById(R.id.edtName);
@@ -66,6 +69,7 @@ public class addInfor extends Fragment {
                 kt = kiemtra();
                 if (kt==true){
                     setAppBar();
+                    setButtonback();
                     setContact();
                     callback.callbackJump(ct);
                 }
@@ -76,6 +80,16 @@ public class addInfor extends Fragment {
         });
 
     }
+
+    private void setButtonback() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callback.callbackJumpAdd();
+            }
+        });
+    }
+
     private Boolean kiemtra() {
 
         if(edtName.getText().length()==0
