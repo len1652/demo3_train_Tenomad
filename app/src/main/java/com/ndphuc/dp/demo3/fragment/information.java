@@ -67,9 +67,7 @@ public class information extends Fragment {
 
         tabLayout = view.findViewById(R.id.tab_Layout);
         viewPager2=view.findViewById(R.id.vPager);
-        adapter = new PagerAdapter(getActivity());
 
-        viewPager2.setAdapter(adapter);
 
 
 
@@ -94,6 +92,9 @@ public class information extends Fragment {
                 .load(ct.getAvatar())
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(txtAvatar);
+
+        adapter = new PagerAdapter(getActivity(),ct.getJob(),ct.getAddress());
+        viewPager2.setAdapter(adapter);
 
         new TabLayoutMediator(tabLayout,viewPager2,((tab, position) -> tab.setText(titles[position]))).attach();
 

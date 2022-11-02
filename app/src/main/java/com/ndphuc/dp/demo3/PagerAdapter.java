@@ -11,9 +11,13 @@ import com.ndphuc.dp.demo3.fragment.job;
 public class PagerAdapter extends FragmentStateAdapter {
 
     private String [] titles=new String[]{"Job","Address"};
+    String job="";
+    String address="";
 
-    public PagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+    public PagerAdapter(@NonNull FragmentActivity fragmentActivity,String job, String address) {
         super(fragmentActivity);
+        this.job = job;
+        this.address = address;
     }
 
 
@@ -23,11 +27,11 @@ public class PagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new job();
+                return new job(job);
             case 1:
-                return new address();
+                return new address(address);
             default:
-                return new job();
+                return new job(job);
         }
     }
 
